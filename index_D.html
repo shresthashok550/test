@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/4.0.4/echarts-en.js"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts-leaflet@1.1.0/dist/echarts-leaflet.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <style>
+        body{
+            background-color:slateblue;
+        }
+        h2{
+            text-align:center;
+            margin:0%;
+        } 
+        
+    </style>
+</head>
+<body>
+    <h2 id="Title">Total Cases</h2>
+    
+<div class="w3-container" style="width:100%">
+    <button type="button" onclick="document.getElementById('Title').innerHTML = 'Total Cases';
+    document.getElementById('jsplot').src = 'Total_D.html'"style="background-color:blue; color:white">Infections</button>
+    <button type="button" onclick="document.getElementById('Title').innerHTML = 'Recovered Cases';
+    document.getElementById('jsplot').src = 'Recovered_D.html'"style='background-color:green; color:white'>Recoveries</button>
+    <button type="button" onclick="document.getElementById('Title').innerHTML = 'Death Cases';
+    document.getElementById('jsplot').src = 'Death_D.html'"style="background-color:red; color:white">Deaths</button>
+</div>
+<div class="w3-container" style="width:100%">
+
+        <iframe id="jsplot" src="Total_D.html" style="height:470px;width:100%">
+        </iframe>
+</div>
+</body>
+</html
+
